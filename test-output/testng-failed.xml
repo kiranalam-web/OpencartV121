@@ -4,10 +4,17 @@
   <listeners>
     <listener class-name="utilities.ExtentReportManager"/>
   </listeners>
-  <test thread-count="5" name="Windows-Chrome(failed)">
-    <parameter name="os" value="Windows"/>
+  <test thread-count="5" name="Linux-Chrome(failed)">
+    <parameter name="os" value="Linux"/>
     <parameter name="browser" value="chrome"/>
     <classes>
+      <class name="testCases.TC002_LoginTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verify_login"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testCases.TC002_LoginTest -->
       <class name="testCases.TC001_AccountRegistrationTest">
         <methods>
           <include name="verify_account_registration"/>
@@ -16,11 +23,38 @@
         </methods>
       </class> <!-- testCases.TC001_AccountRegistrationTest -->
     </classes>
-  </test> <!-- Windows-Chrome(failed) -->
-  <test thread-count="5" name="Windows-Edge(failed)">
-    <parameter name="os" value="Windows"/>
+  </test> <!-- Linux-Chrome(failed) -->
+  <test thread-count="5" name="Linux-Firefox(failed)">
+    <parameter name="os" value="Linux"/>
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="testCases.TC002_LoginTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verify_login"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testCases.TC002_LoginTest -->
+      <class name="testCases.TC001_AccountRegistrationTest">
+        <methods>
+          <include name="verify_account_registration"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testCases.TC001_AccountRegistrationTest -->
+    </classes>
+  </test> <!-- Linux-Firefox(failed) -->
+  <test thread-count="5" name="Linux-Edge(failed)">
+    <parameter name="os" value="Linux"/>
     <parameter name="browser" value="edge"/>
     <classes>
+      <class name="testCases.TC002_LoginTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verify_login"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testCases.TC002_LoginTest -->
       <class name="testCases.TC001_AccountRegistrationTest">
         <methods>
           <include name="verify_account_registration"/>
@@ -29,5 +63,5 @@
         </methods>
       </class> <!-- testCases.TC001_AccountRegistrationTest -->
     </classes>
-  </test> <!-- Windows-Edge(failed) -->
+  </test> <!-- Linux-Edge(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -31,6 +31,15 @@
     		 <class name="testCases.TC002_LoginTest"/> 
     </classes>
   </test>
+  <test name="Linux-Edge">
+    <parameter name="os" value="Linux"/>
+    <parameter name="browser" value="edge"/>
+     
+    <classes>
+            <class name="testCases.TC001_AccountRegistrationTest"/> 
+    		 <class name="testCases.TC002_LoginTest"/> 
+    </classes>
+  </test>
   
   
 </suite> <!-- Suite -->
