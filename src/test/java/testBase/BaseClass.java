@@ -79,7 +79,7 @@ public Properties p;
 			default: System.out.println("No matching browser"); return;
 			}
 			
-			driver=new RemoteWebDriver(new URL(" http://192.168.26.177:4444/wd/hub"),capabilities);
+			driver=new RemoteWebDriver(new URL(" http://localhost:4444/wd/hub"),capabilities);
 		}
 		
 				
